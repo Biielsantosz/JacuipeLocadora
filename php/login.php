@@ -19,21 +19,17 @@ if ($stmt = $conn->prepare("SELECT id, tipo FROM usuarios WHERE email = ? AND se
         $stmt->fetch();
         $_SESSION['id'] = $id;
         $_SESSION['tipo'] = $tipo;
-        $_SESSION['nome'] = $nome;
-
         if ($tipo === 'admin') {
             header("Location: adm.php");
         } else {
             header("Location: /main.php");
         }
     } else {
-        echo "Login ou senha inválidos.";
         header("Location: /403.html");
     }
 
     $stmt->close();
 } else {
-    echo "Erro na consulta.";
     header("Location: /402.html");
 }
 
