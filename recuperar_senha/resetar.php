@@ -3,7 +3,7 @@
 session_start();
 
 // Conexão com o banco de dados
-$conn = new mysqli('localhost', 'root', '', 'locadora3000'); // Altere conforme suas credenciais
+require_once 'db_connection.php';
 
 if ($conn->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conn->connect_error);
