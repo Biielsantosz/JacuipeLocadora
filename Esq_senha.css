@@ -1,0 +1,128 @@
+/* Reset básico para maior consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f4f9;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para o cabeçalho */
+nav {
+    background-color: #585858;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+
+nav .logo a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contêiner principal */
+.reset-password-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-top: 80px;
+}
+
+.reset-password-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.reset-password-container p {
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #4CAF50;
+    box-shadow: #4CAF50;
+}
+
+button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #4CAF50;
+    transform: scale(1.02);
+}
+
+.links {
+    margin-top: 25px;
+}
+
+.links a {
+    display: block;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.links a:hover {
+    color: #4CAF50;
+    transform: translateX(5px);
+}
