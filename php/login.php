@@ -14,7 +14,7 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 
 // Prepara a consulta para verificar o email, senha e o status de verificação do email
-if ($stmt = $conn->prepare("SELECT id, tipo, email_verificado, token_verificacao FROM usuarios WHERE email = ? AND senha = SHA2(?, 256)")) {
+if ($stmt = $conn->prepare("SELECT id, tipo, email_verificado, codigo_verificacao FROM usuarios WHERE email = ? AND senha = SHA2(?, 256)")) {
     $stmt->bind_param("ss", $email, $senha);
     $stmt->execute();
     $stmt->store_result();
@@ -31,7 +31,7 @@ if ($stmt = $conn->prepare("SELECT id, tipo, email_verificado, token_verificacao
             $token = bin2hex(random_bytes(32));
 
             // Atualiza o token no banco de dados
-            $update_stmt = $conn->prepare("UPDATE usuarios SET token_verificacao = ? WHERE email = ?");
+            $update_stmt = $conn->prepare("UPDATE usuarios SET codigo_verificacao = ? WHERE email = ?");
             $update_stmt->bind_param("ss", $token, $email);
             $update_stmt->execute();
             $update_stmt->close();
