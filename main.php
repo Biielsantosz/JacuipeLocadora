@@ -235,7 +235,9 @@ $conn->close();
           <a href="sobre.html">
             <h6>Sobre</h6>
           </a>
-          <h6>Contato</h6>
+          <a href="contato.html">
+            <h6>Contato</h6>
+          </a>
         </div>
         <div class="footer-rental">
           <h4>Aluguel</h4>
