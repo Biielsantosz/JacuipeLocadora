@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
     
     <div class="links">
-        <a href="index.html">Voltar para o login</a>
+        <a href="/index.php">Voltar para o login</a>
     </div>
 </div>
 
