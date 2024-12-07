@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt_token->execute();
 
         // Enviar o link de recuperação para o e-mail do usuário
-        $reset_link = "http://localhost/recuperar_senha/resetar.php?token=" . $token;
+        $reset_link = "http://jacuipelocadora-production.up.railway.app/recuperar_senha/resetar.php?token=" . $token;
 
         // Configuração do PHPMailer
         $mail = new PHPMailer\PHPMailer\PHPMailer();
