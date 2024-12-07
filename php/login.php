@@ -21,7 +21,7 @@ if ($stmt = $conn->prepare("SELECT id, tipo, email_verificado, codigo_verificaca
 
     if ($stmt->num_rows === 1) {
         // Verifica se o email foi verificado
-        $stmt->bind_result($id, $tipo, $email_verificado, $token_verificacao);
+        $stmt->bind_result($id, $tipo, $email_verificado, $codigo_verificacao);
         $stmt->fetch();
 
         if ($email_verificado == 0) {
