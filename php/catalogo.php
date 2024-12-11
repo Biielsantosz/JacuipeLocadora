@@ -411,7 +411,7 @@ $result = $conn->query($sql);
                   <strong>Preço:</strong> R$ <?= number_format($preco, 2, ',', '.') ?>
                 </p>
                 <?php if ($carro['status'] === 'Disponível'): ?>
-                  <form method="POST" action="alocar.php">
+                  <form method="GET" action="alocar.php">
                     <input type="hidden" name="id" value="<?= $carro['id'] ?>">
                     <button type="submit" class="btn btn-success">Alocar</button>
                   </form>
