@@ -179,10 +179,10 @@ p {
     <!-- Sidebar -->
     <div class="sidebar">
         <h2 class="mb-4">Dashboard Administrativo</h2>
-        <a href="cadastrar_carro.php">Cadastrar Carro</a>
-        <a href="ver_clientes.php">Ver Todos os Clientes</a>
-        <a href="ver_carros.php">Ver Todos os Carros</a>
-        <a href="logout.php" class="btn btn-danger mt-3">Sair</a>
+        <button onclick="window.location.href='cadastrar_carro.php'" class="btn btn-link">Cadastrar Carro</button>
+        <button onclick="window.location.href='ver_clientes.php'" class="btn btn-link">Ver Todos os Clientes</button>
+        <button onclick="window.location.href='ver_carros.php'" class="btn btn-link">Ver Todos os Carros</button>
+        <button onclick="window.location.href='logout.php'" class="btn btn-danger mt-3">Sair</button>
     </div>
 
     <!-- Conteúdo Principal -->
@@ -198,7 +198,7 @@ p {
                         <div class="card-body text-center">
                             <h5 class="card-title">Cadastrar Carros</h5>
                             <p class="card-text">Cadastre novos carros para a locadora.</p>
-                            <a href="cadastrar_carro.php" class="btn btn-primary">Cadastrar</a>
+                            <button onclick="window.location.href='cadastrar_carro.php'" class="btn btn-primary">Cadastrar</button>
                         </div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@ p {
                         <div class="card-body text-center">
                             <h5 class="card-title">Ver Todos os Clientes</h5>
                             <p class="card-text">Visualize todos os clientes cadastrados.</p>
-                            <a href="ver_clientes.php" class="btn btn-primary">Ver Clientes</a>
+                            <button onclick="window.location.href='ver_clientes.php'" class="btn btn-primary">Ver Clientes</button>
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@ p {
                         <div class="card-body text-center">
                             <h5 class="card-title">Ver Todos os Carros</h5>
                             <p class="card-text">Visualize todos os carros disponíveis para locação.</p>
-                            <a href="ver_carros.php" class="btn btn-primary">Ver Carros</a>
+                            <button onclick="window.location.href='ver_carros.php'" class="btn btn-primary">Ver Carros</button>
                         </div>
                     </div>
                 </div>

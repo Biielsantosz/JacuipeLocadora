@@ -111,7 +111,7 @@ h1 {
         <h1 class="text-center mb-4">Lista de Carros</h1>
         
         <!-- Botão de Voltar -->
-        <a href="adm.php" class="btn btn-primary mb-4">Voltar ao Dashboard</a>
+        <button href="adm.php" class="btn btn-primary mb-4">Voltar ao Dashboard</button>
 
         <!-- Tabela com rolagem horizontal -->
         <div class="table-responsive">

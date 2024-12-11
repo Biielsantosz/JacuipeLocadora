@@ -136,7 +136,7 @@ $result = $conn->query($sql);
 
         <!-- Botão para Voltar ao Painel -->
         <div class="text-center mb-3">
-            <a href="adm.php" class="btn btn-voltar">Voltar ao Painel</a>
+            <button href="adm.php" class="btn btn-voltar">Voltar ao Painel</button>
         </div>
 
         <!-- Verificação de resultados -->

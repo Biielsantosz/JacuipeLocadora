@@ -201,13 +201,12 @@ $conn->close();
       <nav>
         <p class="brand">Jac<strong>uipe</strong></p>
         <ul>
-          <li><a href="#catalog">Catálogo</a></li>
-
+          <li><button onclick="location.href='#catalog'">Catálogo</button></li>
         </ul>
         <div class="user-menu">
           <span>Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</span>
-          <a href="php/logout.php" class="logout-btn">Sair</a>
-          <a href="php/meus_carros.php" class="btn btn-primary ms-2">Meus Carros</a>
+          <button onclick="location.href='php/logout.php'" class="logout-btn">Sair</button>
+          <button onclick="location.href='php/meus_carros.php'" class="btn btn-primary ms-2">Meus Carros</button>
         </div>
       </nav>
     </div>
@@ -232,24 +231,20 @@ $conn->close();
       <div class="content footer-links">
         <div class="footer-company">
           <h4>Empresa</h4>
-          <a href="sobre.html">
-            <h6>Sobre</h6>
-          </a>
-          <a href="contato.html">
-            <h6>Contato</h6>
-          </a>
+          <button onclick="location.href='sobre.html'"><h6>Sobre</h6></button>
+          <button onclick="location.href='contato.html'"><h6>Contato</h6></button>
         </div>
         <div class="footer-rental">
           <h4>Aluguel</h4>
-          <h6>Dirigir sozinho</h6>
-          <h6>Com motorista</h6>
-          <h6>Ajuda</h6>
+          <button><h6>Dirigir sozinho</h6></button>
+          <button><h6>Com motorista</h6></button>
+          <button><h6>Ajuda</h6></button>
         </div>
         <div class="footer-social">
           <h4>Fique conectado</h4>
           <div class="social-icons">
-            <img src="img/instagram.png" alt="Instagram">
-            <img src="img/facebook.png" alt="Facebook">
+            <a onclick="window.open('https://www.instagram.com', '_blank')"><img src="img/instagram.png" alt="Instagram"></a>
+            <a onclick="window.open('https://www.facebook.com', '_blank')"><img src="img/facebook.png" alt="Facebook"></a>
           </div>
         </div>
         <div class="footer-contact">
@@ -263,5 +258,6 @@ $conn->close();
     <div class="last"> Jacuípe 2024 </div>
   </footer>
 </body>
+
 
 </html>

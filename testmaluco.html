@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Carros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .filters {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .filters h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Catálogo de Carros</h1>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters mb-4">
+            <form method="GET" class="row g-3" onsubmit="return validarFiltros()">
+                <div class="col-md-3">
+                    <label for="status" class="form-label">Status</label>
+                    <select name="status" id="status" class="form-select">
+                        <option value="">Todos</option>
+                        <option value="disponivel">Disponíveis</option>
+                        <option value="indisponivel">Indisponíveis</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="cor" class="form-label">Cor</label>
+                    <input type="text" name="cor" id="cor" class="form-control" placeholder="Ex: Preto">
+                </div>
+                <div class="col-md-3">
+                    <label for="ano" class="form-label">Ano</label>
+                    <input type="number" name="ano" id="ano" class="form-control" placeholder="Ex: 2023" min="0">
+                </div>
+                <div class="col-md-3">
+                    <label for="marca" class="form-label">Marca</label>
+                    <input type="text" name="marca" id="marca" class="form-control" placeholder="Ex: Audi">
+                </div>
+                <div class="col-md-3">
+                    <label for="modelo" class="form-label">Modelo</label>
+                    <input type="text" name="modelo" id="modelo" class="form-control" placeholder="Ex: A3">
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary w-100 mt-4">Filtrar</button>
+                </div>
+                <div class="col-md-3">
+                    <a href="catalogo.php" class="btn btn-secondary w-100 mt-4">Limpar Filtros</a>
+                </div>
+                <div class="col-md-3">
+                    <a href="/main.php" class="btn btn-secondary w-100 mt-4">Voltar</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Resultados -->
+        <div class="results">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="carro1.jpg" class="card-img-top" alt="Carro 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Audi A3 (2023)</h5>
+                            <p class="card-text">
+                                <strong>Marca:</strong> Audi<br>
+                                <strong>Cor:</strong> Preto<br>
+                                <strong>Placa:</strong> ABC-1234<br>
+                                <strong>Status:</strong> Disponível<br>
+                                <strong>Preço:</strong> R$ 150,00
+                            </p>
+                            <a href="#" class="btn btn-success">Alocar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="carro2.jpg" class="card-img-top" alt="Carro 2">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW X5 (2021)</h5>
+                            <p class="card-text">
+                                <strong>Marca:</strong> BMW<br>
+                                <strong>Cor:</strong> Branco<br>
+                                <strong>Placa:</strong> DEF-5678<br>
+                                <strong>Status:</strong> Indisponível<br>
+                                <strong>Preço:</strong> R$ 130,00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validarFiltros() {
+            const cor = document.getElementById('cor').value.trim();
+            const marca = document.getElementById('marca').value.trim();
+            const modelo = document.getElementById('modelo').value.trim();
+            const ano = document.getElementById('ano').value.trim();
+
+            if (cor === "" && marca === "" && modelo === "" && ano === "") {
+                alert("Pelo menos um campo (Cor, Marca, Modelo, Ano) deve ser preenchido.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

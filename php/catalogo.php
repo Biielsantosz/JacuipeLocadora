@@ -318,10 +318,12 @@ $result = $conn->query($sql);
         <button type="submit" class="btn btn-primary w-100 mt-4">Filtrar</button>
       </div>
       <div class="col-md-3">
-        <a href="catalogo.php" class="btn btn-secondary w-100 mt-4">Limpar Filtros</a>
+        <button type="button" class="btn btn-secondary w-100 mt-4" onclick="window.location.href='catalogo.php'">Limpar
+          Filtros</button>
       </div>
       <div class="col-md-3">
-        <a href="/main.php" class="btn btn-secondary w-100 mt-4">Voltar</a>
+        <button type="button" class="btn btn-secondary w-100 mt-4"
+          onclick="window.location.href='/main.php'">Voltar</button>
       </div>
     </form>
 
@@ -384,10 +386,6 @@ $result = $conn->query($sql);
       }
     </script>
 
-
-
-
-
     <!-- Resultados -->
     <?php if ($result && $result->num_rows > 0): ?>
       <div class="row">
@@ -413,7 +411,10 @@ $result = $conn->query($sql);
                   <strong>Preço:</strong> R$ <?= number_format($preco, 2, ',', '.') ?>
                 </p>
                 <?php if ($carro['status'] === 'Disponível'): ?>
-                  <a href="alocar.php?id=<?= $carro['id'] ?>" class="btn btn-success">Alocar</a>
+                  <form method="POST" action="alocar.php">
+                    <input type="hidden" name="id" value="<?= $carro['id'] ?>">
+                    <button type="submit" class="btn btn-success">Alocar</button>
+                  </form>
                 <?php endif; ?>
               </div>
             </div>
@@ -426,6 +427,7 @@ $result = $conn->query($sql);
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 
 </html>
 <?php
