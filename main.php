@@ -224,6 +224,9 @@ $conn->close();
         </form>
       </div>
 
+      <!-- Botão de recarregar a página -->
+      <button onclick="location.reload()" class="reload-btn">Recarregar Página</button>
+      
     </div>
   </section>
   <footer>
@@ -258,6 +261,7 @@ $conn->close();
     <div class="last"> Jacuípe 2024 </div>
   </footer>
 </body>
+
 
 
 </html>
